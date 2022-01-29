@@ -1,0 +1,30 @@
+<div class="my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Author</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Image</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let book of books" [book]="book">
+                            <td valign="middle">{{book.name}}</td>
+                            <td valign="middle">{{book.author}}</td>
+                            <td valign="middle">{{book.price ? book.price : 'Not Available'}}</td>
+                            <td valign="middle"><img src="{{book.imgsrc}}" class="img-fluid" style="width: 80px;"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
